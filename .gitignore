@@ -1,0 +1,8 @@
+*.pyc
+*.dat
+*.log
+*.yaml
+__pycache__/
+avhubert/outputs/
+avhubert/*/checkpoints/
+avhubert/*/tblog/

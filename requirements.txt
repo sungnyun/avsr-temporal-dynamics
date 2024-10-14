@@ -1,0 +1,7 @@
+python-speech-features==0.6
+scipy==1.5.4
+opencv-python==4.5.4.60
+sentencepiece==0.2.0
+editdistance==0.6.0
+h5py==3.10.0
+numpy==1.23.0
