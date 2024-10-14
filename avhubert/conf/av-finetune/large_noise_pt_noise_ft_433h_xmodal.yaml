@@ -80,7 +80,7 @@ lr_scheduler:
   final_lr_scale: 0.05
 
 model:
-  _name: xmodal_av_hubert_seq2seq_clean
+  _name: xmodal_av_hubert_seq2seq
   w2v_path: ???
   apply_mask: false
   mask_selection: static
