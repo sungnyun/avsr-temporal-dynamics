@@ -90,6 +90,17 @@ $ fairseq-hydra-train --config-dir /path/to/conf/ --config-name conf-name \
   hydra.run.dir=/path/to/experiment/finetune/ common.user_dir=`pwd`
 ```
 
+For the implementation of the temporal predictor modules, refer to `avhubert/xmodal_temporal_modules.py`.
+Some important parameters regarding the temporal dynamics learning tasks include:
+- `temporal_flow`: whether to use video-to-video order temporal order loss (default: `False`)
+- `temporal_va_flow`: whether to use video-to-audio order temporal order loss (default: `True`)
+- `temporal_direction`: whether to use temporal direction loss (default: `True`)
+- `temporal_speed`: whether to use temporal speed loss (default: `True`)
+- `temp_hidden_dim`: hidden dimension for temporal predictor modules
+- `aggregator_kernel_size`: kernel size of the 1D temporal convolution layer in the predictor (default: `3`)
+- `xmodal_layers`: number of cross-modal attention layers for each streamline (default: `2` as SA-CA layers specified by `xmodal_layers_type`)
+- `xmodal_embed_dim`: cross-modal attention embedding dimension
+
 ### Decoding
 Suppose the `test.tsv` and `test.wrd` are the video list and transcripts of
 the split to be decoded, saved at `/path/to/LRS3/433h_data`, and the fine-tuned model is

@@ -101,19 +101,19 @@ class XmodalAVHubertSeq2SeqConfig(AVHubertAsrConfig):
 
     # cross-modal attention
     xmodal_layers: int = field(
-        default=3, metadata={"help": "num encoder layers in the transformer"}
+        default=2, metadata={"help": "number of cross-modal attention layers for each streamline"}
     )
     xmodal_layers_type: str = field(
-        default='sa-ca', metadata={"help": "xmodal transformer layers type"}
+        default='sa-ca', metadata={"help": "cross-modal transformer layers type"}
     )
     xmodal_embed_dim: int = field(
-        default=1024, metadata={"help": "encoder embedding dimension"}
+        default=1024, metadata={"help": "cross-modal attention embedding dimension"}
     )
     xmodal_ffn_embed_dim: int = field(
-        default=4096, metadata={"help": "encoder embedding dimension for FFN"}
+        default=4096, metadata={"help": "cross-modal attention embedding dimension for FFN"}
     )
     xmodal_attention_heads: int = field(
-        default=8, metadata={"help": "num encoder attention heads"}
+        default=8, metadata={"help": "number of cross-modal attention heads"}
     )
     xmodal_attention_dropout: float = field(
         default=0.0,
@@ -142,13 +142,13 @@ class XmodalAVHubertSeq2SeqConfig(AVHubertAsrConfig):
         default=False, metadata={"help": "whether to use video-video order temporal flow loss"}
     )
     temporal_va_flow: bool = field(
-        default=False, metadata={"help": "whether to use video-audio order temporal flow loss"}
+        default=True, metadata={"help": "whether to use video-audio order temporal flow loss"}
     )
     temporal_direction: bool = field(
-        default=False, metadata={"help": "whether to use temporal direction loss"}
+        default=True, metadata={"help": "whether to use temporal direction loss"}
     )
     temporal_speed: bool = field(
-        default=False, metadata={"help": "whether to use temporal speed loss"}
+        default=True, metadata={"help": "whether to use temporal speed loss"}
     )
     temp_len: int = field(
         default=1, metadata={"help": "temporal bulk length"}
