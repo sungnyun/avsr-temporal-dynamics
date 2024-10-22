@@ -1,9 +1,6 @@
 # Video Temporal Dynamics for Robust AVSR (SLT 2024)
 
-<a href='https://arxiv.org/abs/2407.03563'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>  <a href=#bibtex><img src='https://img.shields.io/badge/Paper-BibTex-Green'></a> 
-
-
-<br>
+<a href='https://arxiv.org/abs/2407.03563'><img src='https://img.shields.io/badge/Paper-arXiv:2407.03563-red'></a>  <a href=#bibtex><img src='https://img.shields.io/badge/Paper-BibTex-Green'></a> 
 
 <p align="center">
 <img width="1400" alt="model" src="./assets/avsr_fig.png">
